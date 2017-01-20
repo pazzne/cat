@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cat</title>
+	<style type="text/css">
+		*{ margin: 0; padding: 0; }
+		input{ display: none; }
+         .main{
+         	width: 1200px;
+         	height: 700px;
+         	margin: 0 auto;
+         }
+		.header{
+			width: 1200px;
+			height: 150px;
+		    position: relative;
+			background: url(img/banner4.jpg);
+			
+		}
+		.movie{
+			background: url(img/miaomi1.png);
+			width: 220px;
+			height: 138px;
+			position: absolute;
+			z-index:999;
+			-moz-animation:change 5s;
+			opacity: 0.5;
+			-webkit-animation:change 5s;
+
+		}
+		@-moz-keyframes change {
+			from { left: 0;top: 0; }
+			to { left:900px;top: 0;  }
+		}
+		@-webkit-keyframes change {
+			from { left: 0;top: 0; }
+			to { left:900px;top: 0;  }
+		}
+		@keyframes change {
+			from {  left: 0;top: 0;}
+			to { left: 900px;top: 0; }
+		}
+		.left{
+			
+			width: 200px;
+			height:650px; 
+			background: gray;
+		    display: inline-block;
+		    float: left;
+
+		}
+
+		.left label{
+		display: inline-block;
+		height: 160px;
+		width:200px;
+		line-height: 160px;
+		color: white;
+		font-size: 20px;
+		border-bottom: 2px solid black;
+		text-align: center;
+
+		}
+
+		.left label:hover{
+			background: #D2B48C;
+		}
+		
+		#a1:checked~.main label:nth-child(1),
+		#a2:checked~.main label:nth-child(2),
+		#a3:checked~.main label:nth-child(3),
+		#a4:checked~.main label:nth-child(4){
+			background: #333;
+		}
+		.right div{
+			display: none;
+		}
+		div img{
+			width: 1000px;
+			height: 650px;
+
+		}
+		.right{
+			width: 1000px;
+			height: 650px;
+			background: ;
+			display: inline-block;
+			float: left;
+			background-size: 1000;
+			overflow: hidden;
+	}
+
+	   
+		#a1:checked~.main #b1,
+		#a2:checked~.main #b2,
+		#a3:checked~.main #b3,
+		#a4:checked~.main #b4{
+			display: inline-block;
+			
+		}
+      .clear{
+		       	clear: both;
+		       }
+
+	</style>
+</head>
+<body>
+
+   <input type="radio" name="choose" checked="checked" id="a1" value="" />
+   <input type="radio" name="choose" id="a2" value="" />
+	<input type="radio" name="choose" id="a3"
+	value="" />
+	<input type="radio" name="choose" id="a4" value="" />
+
+	<div class="main">
+		<div class="header">
+			<div class="movie"></div>
+		</div>
+		<div class="content">
+			<div class="left">
+				<label for="a1">蓝猫</label>
+				<label for="a2">森林猫</label>
+				<label for="a3">狸花猫</label>
+				<label for="a4">虎斑猫</label>
+			</div>
+			<div class="right">
+				<div id="b1">
+					<img src="img/俄罗斯蓝猫.jpg" alt="">
+				</div>
+				<div id="b2">
+					<img src="img/挪威森林猫.jpg" alt="">
+				</div>
+				<div id="b3">
+					<img src="img/狸花猫.jpg" alt="">
+				</div>
+				<div id="b4">
+					<img src="img/虎斑猫.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="foot"></div>
+	</div>
+</body>
+</html>
